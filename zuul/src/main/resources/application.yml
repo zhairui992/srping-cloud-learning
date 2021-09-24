@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Zuul-Gateway
+  cloud:
+    gateway:
+      routes:
+      - id: app1
+        uri: lb://SERVER-CONSUMER
+        predicates:
+        - Path=/app1/**
+        filters:
+        - StripPrefix=1
+
+server:
+  port: 10000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8080/eureka/
+
+# zuul:
+#   routes:
+#     Server-Consumer:
+#         path: /app1/**
+#         serviceId: SERVER-CONSUMER

@@ -1,4 +1,3 @@
-
 # Eureka
 
 Eureka是由Netflix开发的一款服务治理开源框架，Spring-cloud对其进行了集成。
@@ -11,7 +10,7 @@ Eureka是由Netflix开发的一款服务治理开源框架，Spring-cloud对其�
 
 其中每个模块都可以是多个服务。
 
-# 例子
+## 例子
 
 分别启动 server、provider、consumer
 
