@@ -45,7 +45,7 @@ ribbon的负载均衡如下图：
 ## Ribbon的负载均衡模式
 * RoundRobinRule：轮询策略
 * RandomRule: 随机策略
-* RetryRule: 重试策略
+* RetryRule: 重试策略 先按照 RoundRobinRule 策略获取 provider，若获取失败，则在指定的时限内重试。默认的时限为 500 毫秒。
 
 spring 配置
 
